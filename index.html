@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>FAITH HOME CHARITABLE TRUST</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f9ff;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* LOGO AREA */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-area img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+color:#1a73e8;
+}
+
+/* NAVIGATION */
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#1a73e8;
+}
+
+.donate{
+background:#1a73e8;
+color:white;
+padding:8px 18px;
+border-radius:20px;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:60px;
+background:linear-gradient(to right,#e3f2fd,#bbdefb);
+}
+
+.hero-text{
+width:50%;
+}
+
+.hero-text h1{
+font-size:42px;
+color:#0d47a1;
+}
+
+.hero-text p{
+font-size:18px;
+}
+
+.buttons{
+margin-top:20px;
+}
+
+.btn{
+background:#1a73e8;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+margin-right:10px;
+cursor:pointer;
+border:none;
+}
+
+.btn-outline{
+border:2px solid #1a73e8;
+padding:12px 20px;
+color:#1a73e8;
+border-radius:6px;
+cursor:pointer;
+background:white;
+}
+
+.hero img{
+width:420px;
+border-radius:10px;
+}
+
+/* SERVICES */
+
+.section{
+padding:60px;
+text-align:center;
+}
+
+.services{
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+width:220px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+
+.slider{
+width:80%;
+margin:auto;
+position:relative;
+}
+
+.slide{
+width:100%;
+display:none;
+border-radius:10px;
+}
+
+/* VOLUNTEER */
+
+.volunteer{
+background:#e3f2fd;
+padding:60px;
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+background:#0d47a1;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+/* POPUPS */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+padding:30px;
+width:400px;
+border-radius:10px;
+text-align:center;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:20px;
+}
+
+input,textarea{
+width:90%;
+padding:10px;
+margin:8px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.qr{
+width:200px;
+margin-top:10px;
+}
+
+/* ADMIN */
+
+.admin{
+padding:60px;
+text-align:center;
+background:#f0f7ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-area">
+
+<img src="logo.png" alt="Faith Home Charitable Trust Logo">
+
+<div class="logo">FAITH HOME CHARITABLE TRUST</div>
+
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a onclick="openVolunteer()">Volunteer</a>
+<a href="#contact">Contact</a>
+<a class="donate" onclick="openDonate()">Donate</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Spreading Love and Compassion</h1>
+
+<p>
+Faith Home Charitable Trust works to help poor families,
+provide food support, education and community service.
+</p>
+
+<div class="buttons">
+
+<button class="btn" onclick="openDonate()">Donate Now</button>
+
+<button class="btn-outline" onclick="openVolunteer()">Become Volunteer</button>
+
+</div>
+
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1593113630400-ea4288922497">
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Food Distribution</h3>
+<p>Providing meals for poor families.</p>
+</div>
+
+<div class="card">
+<h3>Education Support</h3>
+<p>Helping children with books and education.</p>
+</div>
+
+<div class="card">
+<h3>Health Camps</h3>
+<p>Free medical camps for needy people.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="slider">
+
+<img class="slide" src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6">
+<img class="slide" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<img class="slide" src="https://images.unsplash.com/photo-1559027615-cd4628902d4a">
+<img class="slide" src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+
+</div>
+
+</section>
+
+<!-- VOLUNTEER -->
+
+<section class="volunteer">
+
+<h2>Become a Volunteer</h2>
+
+<p>Join us to serve the community.</p>
+
+<button class="btn" onclick="openVolunteer()">Join Now</button>
+
+</section>
+
+<!-- ADMIN -->
+
+<section class="admin">
+
+<h2>Admin Gallery Upload</h2>
+
+<input type="file">
+
+<br><br>
+
+<button class="btn">Upload Image</button>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>Email : faithhomecharity@gmail.com</p>
+<p>Phone : +91 9876543210</p>
+<p>Location : Andhra Pradesh, India</p>
+
+</section>
+
+<!-- DONATE POPUP -->
+
+<div class="popup" id="donatePopup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup('donatePopup')">✖</span>
+
+<h2>Donate</h2>
+
+<p><b>Account Name:</b> FAITH HOME CHARITABLE TRUST</p>
+<p><b>Bank:</b> State Bank of India</p>
+<p><b>Account No:</b> 1234567890</p>
+<p><b>IFSC:</b> SBIN0001234</p>
+
+<a href="upi://pay?pa=faithtrust@upi&pn=FaithHomeTrust&cu=INR">
+<button class="btn">Pay via UPI</button>
+</a>
+
+<br><br>
+
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=FaithHomeTrust">
+
+</div>
+
+</div>
+
+<!-- VOLUNTEER POPUP -->
+
+<div class="popup" id="volunteerPopup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup('volunteerPopup')">✖</span>
+
+<h2>Volunteer Form</h2>
+
+<form>
+
+    <form action="/submit_volunteer" method="POST">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="tel" name="phone" placeholder="Phone">
+
+<input type="text" name="city" placeholder="City">
+
+<textarea name="reason" placeholder="Why do you want to volunteer?"></textarea>
+
+<br>
+
+<button class="btn">Submit</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+function openDonate(){
+document.getElementById("donatePopup").style.display="flex";
+}
+
+function openVolunteer(){
+document.getElementById("volunteerPopup").style.display="flex";
+}
+
+function closePopup(id){
+document.getElementById(id).style.display="none";
+}
+
+let slideIndex=0;
+
+showSlides();
+
+function showSlides(){
+
+let slides=document.getElementsByClassName("slide");
+
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+slideIndex++;
+
+if(slideIndex>slides.length){
+slideIndex=1;
+}
+
+slides[slideIndex-1].style.display="block";
+
+setTimeout(showSlides,3000);
+
+}
+
+</script>
+
+</body>
+</html>

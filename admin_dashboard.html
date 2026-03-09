@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Faith Home Charitable Trust</title>
+    <style>
+        body { font-family: Arial; margin: 20px; background: #f4f9ff; }
+        h1, h2 { color: #1a73e8; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; background: white; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background: #1a73e8; color: white; }
+        input, textarea { padding: 5px; margin: 5px 0; width: 200px; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 5px 10px; background: #1a73e8; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0d47a1; }
+        form { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); width: fit-content; }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+
+    <h2>Add Volunteer</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone">
+        <input type="text" name="city" placeholder="City">
+        <textarea name="reason" placeholder="Reason for volunteering"></textarea><br>
+        <button type="submit">Add Volunteer</button>
+    </form>
+
+    <h2>Volunteer List</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Reason</th>
+        </tr>
+        {% for v in volunteers %}
+        <tr>
+            <td>{{ v[1] }}</td>
+            <td>{{ v[2] }}</td>
+            <td>{{ v[3] }}</td>
+            <td>{{ v[4] }}</td>
+            <td>{{ v[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
